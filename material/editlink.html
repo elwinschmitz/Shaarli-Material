@@ -3,11 +3,7 @@
 <head>
     {include="includes"}
 </head>
-<body
-{if="$link.title==''"}onload="document.linkform.lf_title.focus();"
-{elseif="$link.description==''"}onload="document.linkform.lf_description.focus();"
-{else}onload="document.linkform.lf_tags.focus();"{/if}
-{if="!empty($_GET['source']) && $_GET['source']=='bookmarklet'"}class="from-bookmarklet"{/if} >
+<body {if="!empty($_GET['source']) && $_GET['source']=='bookmarklet'"}class="from-bookmarklet"{/if} >
 {include="page.header"}
 <div id="editlinkform" class="container page-edit">
     <div class="row" id="editlinkform-row">
@@ -37,7 +33,7 @@
                     <div class="form-entry">
                         <label for="lf_tags">Tags</label><br/>
                         <input type="text" id="lf_tags" name="lf_tags" id="lf_tags" value="{$link.tags}" class="lf_input"
-                            data-list="{loop="$tags"}{$key}, {/loop}" data-multiple autocomplete="off" />
+                            data-list="{loop="$tags"}{$key}, {/loop}" data-multiple autocomplete="off" autofocus />
                     </div>
                     {if="isset($edit_link_plugin)"}
                     <div class="form-entry">

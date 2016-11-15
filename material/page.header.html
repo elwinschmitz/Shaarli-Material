@@ -13,12 +13,6 @@
                         <a href="?do=tagcloud" class="toolbar-link button-inverse ripple">Tag cloud</a>
                     </div>
                     <div class="col-xs-6 col-sm-3 text-center">
-                        <a href="?do=picwall{$searchcrits}" class="toolbar-link button-inverse ripple">Picture wall</a>
-                    </div>
-                    <div class="col-xs-6 col-sm-3 text-center">
-                        <a href="?do=daily" class="toolbar-link button-inverse ripple">Daily</a>
-                    </div>
-                    <div class="col-xs-6 col-sm-3 text-center">
                         <button class="toolbar-link button-inverse ripple" id="button-search">Search</button>
                     </div>
                 </div>
@@ -70,7 +64,6 @@
                             </div>
                         </div>
                     {else}
-                        <a href="{$feedurl}?do=rss{$searchcrits}" class="icon-rss ripple" title="RSS Feed"></a>
                     {/if}
                     <div class="toolbar-button-container">
                         <button type="button" class="icon-filter popup-trigger ripple" data-popup="popup-filter" title="Change links per page"></button>
